@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<!-- Mirrored from brug.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 Mar 2023 11:08:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>[[ cas brugman ]]</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#00ffff" />
+    <meta name="author" content="Cas Brugman" />
+    <link rel="icon" href="system-files/img/icon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+      var clicked = false
+      document.addEventListener("click", () => {
+        clicked = true
+      })
+    </script>
+  </head>
+
+  <body onresize="resize()">
+    <!--..._____._______.____._____-->
+    <!--../.____|__._ _/.__.\|.__.\-->
+    <!--.|.(___...| |..|.|.|.|.|_).|-->
+    <!--.\___..\..| |..|.|.|.|.___/-->
+    <!--.____).|..| |..|.|_|.|.|-->
+    <!--.|_____/..|_|..\____/|_|-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!-->
+    <!-- You are about to enter the source code. -->
+    <!-- It is adviced to stop reading immediatly and to close this file for your own personal mental health.-->
+    <!-- Its workings are unknown but is suspected to be contagious and should be left alone.-->
+    <!-- Thank you for your understanding. -->
+
+    <div id="os">
+      <div id="desktop"></div>
+      <div id="windows"></div>
+      <div id="taskbar">
+        <div id="tray">
+          <img
+            id="computertjes"
+            draggable="false"
+            style="
+              float: left;
+              margin-top: 1.5px;
+              margin-left: 3px;
+              cursor: pointer;
+            "
+            src="system-files/img/computertjes.png"
+          />
+          <span id="time"></span>
+        </div>
+        <div id="dock">
+          <button id="start">
+            <img src="system-files/img/start.png" draggable="false" />
+            <b>Start</b>
+          </button>
+        </div>
+      </div>
+      <div id="contextmenu"></div>
+      <canvas id="ctx"></canvas>
+    </div>
+    <div id="boot">
+      <div id="log">
+        <pre></pre>
+      </div>
+      <img draggable="false" src="system-files/img/logo.png" />
+    </div>
+
+    <script>
+      document.body.addEventListener("contextmenu", (e) => {
+        contextMenu()
+        e.preventDefault()
+      })
+    </script>
+
+    <!-- scripts -->
+    <script src="system-files/js/programs.js"></script>
+    <script src="system-files/js/terminal.js"></script>
+    <script src="system-files/js/input.js"></script>
+    <script src="system-files/js/desktop.js"></script>
+    <script src="system-files/js/loop.js"></script>
+
+    <!-- debug -->
+    <script>
+      var debug = {
+        boot: true,
+        //start: programs.terminal.exe,
+      }
+    </script>
+
+    <!-- start -->
+    <script src="system-files/js/boot.js"></script>
+  </body>
+
+<!-- Mirrored from brug.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 Mar 2023 11:08:40 GMT -->
+</html>
